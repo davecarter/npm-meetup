@@ -1,22 +1,21 @@
 {
-  "name": "reveal.js",
-  "version": "3.3.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "npm-meetup",
+  "version": "1.0.0",
+  "description": "Meetup día 27 Mayo 2016 en Schibsted Spain sobre NPM",
+  "homepage": "http://davecarter.github.io/npm-meetup",
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "David Garcia",
+    "email": "dave74@gmail.com",
+    "web": "http://davecarter.me"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git@github.com:davecarter/npm-meetup.git"
   },
   "engines": {
     "node": "~4.1.1"
