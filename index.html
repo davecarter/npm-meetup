@@ -36,7 +36,7 @@
 					<section>
 						<h3>Instalación del entorno</h3>
 						<br />
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 
 						<code>
 							<pre>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash</pre>
@@ -45,7 +45,7 @@
 					</section>
 
 					<section>
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 						<h4 class="highlighted">Listar versiones remotas de Node</h4>
 						<code>
 							<pre><span class="highlighted">$ ></span> nvm ls-remote</pre>
@@ -53,7 +53,7 @@
 					</section>
 
 					<section>
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 						<h4 class="highlighted">Instalar versión específica de Node</h4>
 						<code>
 							<pre><span class="highlighted">$ ></span> nvm install v6.0.0</pre>
@@ -62,7 +62,7 @@
 					</section>
 
 					<section>
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 						<h4 class="highlighted">Listar versiones instaladas</h4>
 						<code>
 							<pre>
@@ -77,7 +77,7 @@
 					</section>
 
 					<section>
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 						<h4 class="highlighted">Asignar versión de Node</h4>
 						<code>
 							<pre><span class="highlighted">$ ></span> nvm use v6.0.0</pre>
@@ -85,13 +85,34 @@
 					</section>
 
 					<section>
-						<h2>Node Version Manager</h2>
+						<h3>Node Version Manager</h3>
 						<h4 class="highlighted">Crear un Alias</h4>
 						<code>
 							<pre>
-<span class="highlighted">$ ></span> nvm alias default 6
-<span class="highlighted">$ ></span> default -> 6 (-> v6.0.0)</pre>
+<span class="highlighted">$ ></span> nvm alias miProyecto 6
+<span class="highlighted">$ ></span> miProyecto -> 6 (-> v6.0.0)</pre>
 						</code>
+						<small>nvm alias default > setea versión por defecto</small>
+					</section>
+
+					<section>
+						<h3>Node Version Manager</h3>
+						<h4 class="highlighted">Borrar un Alias</h4>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> nvm unalias miProyecto 6
+<span class="highlighted">$ ></span> miProyecto -> 6 (-> v6.0.0)</pre>
+						</code>
+					</section>
+
+					<section>
+						<h3>Node Version Manager</h3>
+						<h4 class="highlighted">Paquetes globales en NVM</h4>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> nvm install 6.0.0 --reinstall-packages-from 5.0.0</pre>
+						</code>
+						<small>$ > nvm which 6.0.0 - Indica la ruta de instalación</small>
 					</section>
 
 				</section>
