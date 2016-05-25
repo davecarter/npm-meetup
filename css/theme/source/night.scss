@@ -33,3 +33,23 @@ $mainFontSize: 30px;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+.reveal {
+	section {
+		img {
+			background: none;
+			border: none;
+		}
+	}
+
+  pre {
+    background: #122F17;
+    padding: 20px;
+  }
+
+  .highlighted {
+    color: yellow;
+    font-weight: bold;
+  }
+}
