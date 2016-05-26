@@ -117,11 +117,14 @@
 
 				</section>
 
+<!-- NPM CLI  -->
+
 				<section>
+
 					<section>
 						<img src="img/npm-logo.png" alt="" width="200"/>
-						<h2>npm Conceptos básicos</h2>
-						<p>Inicializar un proyecto <span class="highlighted">npm</span></p>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Inicializar</span> un proyecto npm</p>
 						<code>
 							<pre>
 <span class="highlighted">$ ></span> npm init
@@ -132,7 +135,7 @@
 
 					<section>
 						<img src="img/npm-logo.png" alt="" width="200"/>
-						<h2>npm Conceptos básicos</h2>
+						<h2>npm CLI</h2>
 						<p>Estructura del <span class="highlighted">package.json</span></p>
 						<code>
 							<pre>
@@ -155,6 +158,162 @@
 						</code>
 						<small style="display:block">Ejemplo resumido de archivo de meta-datos del proyecto npm</small>
 					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Instalación</span> de paquetes npm</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm install [nombre del package]
+<span class="highlighted">$ ></span> npm install [nombre del package]@3.4.12 // Versión específica
+<span class="highlighted">$ ></span> npm i [nombre del package] // shortcut</pre>
+						</code>
+						<small style="display:block">prueba <span class="highlighted">$ > npm isntall</span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p>Instalación de paquetes <span class="highlighted">locales</span></p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm install [nombre del package] -S
+<span class="highlighted">$ ></span> npm install [nombre del package] --save</pre>
+						</code>
+						<small style="display:block">Añadimos como dependencia en <span class="highlighted">package.json</span></span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p>Instalación de paquetes como <span class="highlighted">dependencia de desarrollo</span></p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm install [nombre del package] -D
+<span class="highlighted">$ ></span> npm install [nombre del package] --save-dev</pre>
+						</code>
+						<small style="display:block">Añadimos como dependencia de desarrollo en <span class="highlighted">package.json</span></span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p>Instalación de paquetes <span class="highlighted">globales</span></p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm install [nombre del package] -g
+<span class="highlighted">$ ></span> npm install [nombre del package] --global</pre>
+						</code>
+						<small style="display:block">Estará disponible a nivel de <span class="highlighted">usuario</span></span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p>Instalación de <span class="highlighted">múltiples</span> paquetes</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm install [package1] [package2] [package3] --save</pre>
+						</code>
+						<small style="display:block">Estará disponible a nivel de <span class="highlighted">usuario</span></span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Actualización</span> de paquetes</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm update [package]</pre>
+						</code>
+						<small style="display:block">Obtenemos la versión más reciente del repositorio de <span class="highlighted">npm</span></span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Desinstalación</span> de paquetes</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm uninstall [package]
+<span class="highlighted">$ ></span> npm uninstall [package] --save
+<span class="highlighted">$ ></span> npm uninstall [package] --save-dev
+
+<span class="highlighted">$ ></span> npm un [package]</pre>
+						</code>
+						<small style="display:block">Utiliza el flag --save o --save-dev para eliminarlo del <span class="highlighted">package.json</span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Enlazar</span> paquetes locales</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm link // En el paquete a enlazar
+<span class="highlighted">$ ></span> npm link [package] // En el paquete que carga la dependencia</pre>
+						</code>
+						<small style="display:block">Crea un Symlink a la carpeta <span class="highlighted">node_modules</span> local</small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Desenlazar</span> paquetes</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm unlink // En el paquete a desenlazar
+<span class="highlighted">$ ></span> npm unlink [package] // En el paquete que cargaba la dependencia</pre>
+						</code>
+						<small style="display:block">Al desenlazar un paquete necesitaremos volver a ejecutar <span class="highlighted">npm install</span></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Publicar</span> un paquete a npm</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm publish</pre>
+						</code>
+						<small style="display:block">Un paquete no puede volver a re-publicarse con la <span class="highlighted">misma versión</span></small>
+						<small style="padding-top:10px">Si despublicas un paquete puedes <a href="http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm">romper Internet</a></small>
+					</section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm CLI</h2>
+						<p><span class="highlighted">Mostrar</span> información de un paquete</p>
+						<code>
+							<pre>
+<span class="highlighted">$ ></span> npm view [package]
+<span class="highlighted">$ ></span> npm view [package] versions</pre>
+						</code>
+						<small style="display:block">Lee metadatos del <span class="highlighted">package.json</span></small>
+					</section>
+
+				</section>
+
+<!-- NPM SCRIPTS  -->
+
+				<section>
+
+					<section>
+						<img src="img/npm-logo.png" alt="" width="200"/>
+						<h2>npm Scripts</h2>
+						<p><span class="highlighted">Ejecutar</span> un script</p>
+						<code>
+							<pre>
+"scripts": {
+  "sass": "node-sass -o dist/css src/scss"
+ }
+
+<span class="highlighted">$ ></span> npm run sass</pre>
+						</code>
+						<small style="display:block">Mediante 'npm run ...' podemos ejecutar scripts definidos en el <span class="highlighted">package.json</span></small>
+					</section>
+
 				</section>
 
 			</div>

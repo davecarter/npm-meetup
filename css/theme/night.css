@@ -291,6 +291,8 @@ body {
 .reveal pre {
   background: #122F17;
   padding: 20px; }
+  .reveal pre span {
+    line-height: 2; }
 
 .reveal .highlighted {
   color: yellow;
