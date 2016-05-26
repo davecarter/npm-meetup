@@ -409,6 +409,130 @@
 					<small style="display:block"><a href="https://www.npmjs.com/package/node-sass">node-sass</a> es un wrapper de 'LibSass' sobre node que nos permite preprocesar archivos '.scss'</small>
 				</section>
 
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p>Instalación de <span class="highlighted">BabelJS</span></p>
+					<code>
+						<pre>
+"scripts": {
+  "build:js": "babel src/js --out-dir dist/js"
+}
+
+<span class="highlighted">$ ></span> npm install babel-cli babel-preset-es2015 --save-dev
+<span class="highlighted">$ ></span> npm run build:js</pre>
+					</code>
+					<small style="display:block"><a href="https://babeljs.io/">BabelJS</a> es un transpiler de archivos JS que nos permite utilizar versiones futuras de Javascript</small>
+					<small style="display:block">Instala en la raiz de tu proyecto un archivo <a href="https://github.com/davecarter/npm-project/blob/master/.babelrc">.babelrc</a> con la configuración</small>
+				</section>
+
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p>Linting de Sass y Javascript con <span class="highlighted">Eslint</span></p>
+					<code>
+						<pre>
+"scripts": {
+  "lint:sass": "sass-lint src/**/*.scss -c -v",
+  "lint:js": "eslint src/js/**/*.js",
+  "lint": "npm run lint:sass && npm run lint:js"
+}
+
+<span class="highlighted">$ ></span> npm install eslint sass-lint babel-eslint --save-dev
+<span class="highlighted">$ ></span> npm run lint</pre>
+					</code>
+					<small style="display:block"><a href="http://eslint.org/">Eslint</a> es un potente linter que soporta Sass, JS y JSX</small>
+					<small style="display:block">Instala en la raiz de tu proyecto un archivo <a href="https://github.com/davecarter/npm-project/blob/master/.eslintrc.json">.eslintrc.json</a> con la configuración</small>
+					<small style="display:block">Instala en la raiz de tu proyecto un archivo <a href="https://github.com/davecarter/npm-project/blob/master/.sass-lint.yml">.sass-lint.yml</a> con la configuración</small>
+				</section>
+
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p>Test unitarios con <span class="highlighted">MochaJS y Chai</span></p>
+					<code>
+						<pre>
+"scripts": {
+  "test": "mocha --compilers js:babel-register",
+  "test:watch": "mocha --compilers js:babel-register --watch"
+}
+
+<span class="highlighted">$ ></span> npm install mocha chai --save-dev
+<span class="highlighted">$ ></span> npm run test
+<span class="highlighted">$ ></span> npm run test:watch // modo TDD</pre>
+					</code>
+					<small style="display:block"><a href="http://eslint.org/">MochaJS</a> es un framework de test unitarios. Además instalaremos la librería de aserciones <a href="http://chaijs.com/">Chai</a></small>
+				</section>
+
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p><span class="highlighted">Pre-commit</span> hook</p>
+					<code>
+						<pre>
+"pre-commit": [
+  "lint",
+  "test"
+]
+
+<span class="highlighted">$ ></span> npm install precommit-hook --save-dev</pre>
+
+					</code>
+					<small style="display:block">El <a href="https://www.npmjs.com/package/precommit-hook">pre-commit</a> hook no nos permitirá publicar a github si no pasamos las reglas especificadas por los linters</small>
+				</section>
+
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p><span class="highlighted">Watching</span> sass, js y html</p>
+					<code>
+						<pre>
+"scripts": {
+  "watch:css": "onchange src/scss/*.scss -- npm run build:css",
+  "watch:js": "onchange src/js/*.js -- npm run build:js",
+  "watch:html": "onchange dist/*.html -- npm run serve"
+}
+
+<span class="highlighted">$ ></span> npm install onchange --save-dev
+
+<span class="highlighted">$ ></span> npm run watch:css
+<span class="highlighted">$ ></span> npm run watch:js
+<span class="highlighted">$ ></span> npm run watch:html</pre>
+
+					</code>
+					<small style="display:block"><a href="https://www.npmjs.com/package/onchange">OnChange</a> nos permite detectar cambios en archivos para poder lanzar scripts npm</small>
+				</section>
+
+				<section>
+					<img src="img/npm-logo.png" alt="" width="200"/>
+					<h2>Frontend Boilerplate</h2>
+					<p><span class="highlighted">Recargando</span> el navegador con BrowserSync</p>
+					<code>
+						<pre>
+"scripts": {
+	"serve": "browser-sync start --server dist --files dist",
+	"dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'"
+}
+
+<span class="highlighted">$ ></span> npm install browser-sync parallelshell --save-dev
+
+<span class="highlighted">$ ></span> npm run dev</pre>
+
+					</code>
+					<small style="display:block"><a href="https://www.npmjs.com/package/parallelshell">ParallelShell</a> nos permite tener múltiples procesos ejecutándose al mismo tiempo</small>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+						<h2>Gracias!</h2>
+						<img src="https://pbs.twimg.com/profile_images/430835350114942976/7hRSb8rv_400x400.jpeg" alt="" width="200" style="display:block; margin: 0 auto 50px">
+						<small>Twitter - <a href="http://twitter.com/d4vecarter">@d4vecarter</a></small><br />
+						<small>Youtube - <a href="https://www.youtube.com/c/AprendiendoFrontend">Aprendiendo Frontend</a></small><br />
+						<small>GitHub - <a href="https://github.com/davecarter">davecarter</a></small><br />
+						<small>LinkedIn - <a href="https://www.linkedin.com/in/davidgarciaontivero">David García</a></small>
+				</section>
 			</section>
 
 			</div>
